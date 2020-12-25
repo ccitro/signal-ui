@@ -1,0 +1,46 @@
+/* make message bubbles less cartoony */
+.module-message__container {
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* moving incoming timestamps in group chats */
+.module-message--group .module-message__text--incoming {
+    min-width: 150px;
+}
+
+.module-message--group .module-message__metadata--incoming {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+}
+
+.module-message--group .module-message__metadata--with-image-no-caption {
+    bottom: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* shrinking left pane */
+:root {
+    --shrink-by: 50px;
+  }
+  
+
+.module-left-pane__virtual-list {
+    width: calc(320px - var(--shrink-by)) !important;
+}
+
+.module-main-header {
+    width: calc(320px - var(--shrink-by)) !important;
+}
+
+.module-main-header__search__input {
+    width: calc(248px - var(--shrink-by)) !important;
+}
+
+.gutter {
+    width: calc(320px - var(--shrink-by)) !important;
+}
